@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('default.jpg');
+    background-size: cover; /* Ensure background image covers the whole body */
+    background-position: center; /* Center the background image */
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    transition: background-image 0.5s ease; /* Smooth transition for background change */
+   
+}
+
+
+.weather-app {
+    background-color: rgba(255, 255, 255, 1); /* White background with 80% opacity */
+    max-width: 90%; /* Reduced width for smaller screens */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Ensures form elements scale for small screens */
+.search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Center the form */
+    margin-bottom: 20px; /* Spacing below search form */
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 1rem;
+    height: 3rem;
+}
+
+.search-btn {
+    background-color: #ee13b0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #950cf7;
+}
+
+/* Ensures the city and date display well on small screens */
+.city-date-section {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.city-date-section .city {
+    font-size: 1.5rem; /* Reduce font size for smaller screens */
+    opacity: 0.9;
+}
+
+.city-date-section .date {
+    background-color: #c3eaf4;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+/* Temperature information for responsiveness */
+.temperature-info {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.temperature-info .temp {
+    font-size: 7rem; /* Adjust size for mobile */
+}
+
+.temperature-info .description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.temperature-info .description i {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+.temperature-info .description span {
+    font-size: 1.5rem;
+}
+
+/* Adjust additional info section layout for small screens */
+.additional-info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Stack vertically on small screens */
+    align-items: center;
+    gap: 10px;
+}
+
+.wind-info,
+.humidity-info,
+.visibility-info {
+    background-color: #ecf0f1;
+    width: 100%; /* Full width for small screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Larger icons for better visibility on small screens */
+.additional-info .material-icons {
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+
+.weather-app {
+    background: rgba(255, 255, 255, 0.2); /* More transparent for better background visibility */
+    backdrop-filter: blur(10px); /* Adds blur for the glassmorphism effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border for better contrast */
+    max-width: 90%; /* Responsive width */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow for better floating effect */
+}
+
+/* You can also tweak the additional sections for better visibility */
+.wind-info,
+.humidity-info,
+.visibility-info {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent sections */
+    backdrop-filter: blur(5px); /* Adds blur for glass effect */
+    width: 100%; /* Full width for small screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+/* Media queries to ensure responsiveness */
+@media (min-width: 768px) {
+    .weather-app {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 30px;
+    }
+
+    .temperature-info .temp {
+        font-size: 10rem; /* Larger size for wider screens */
+    }
+
+    .additional-info {
+        flex-direction: row; /* Row layout for larger screens */
+        justify-content: space-around;
+    }
+
+    .wind-info,
+    .humidity-info,
+    .visibility-info {
+        width: 150px;
+        padding: 30px 20px;
+    }
+}
+
